@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #87CEEB; /* Svetlá modrá */
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    background-color: #FFC0CB;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.form div {
+    margin-bottom: 15px;
+}
+
+.form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form input[type="text"],
+.form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 2rem;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#player {
+    display: none;
+}
+.images {
+    position: absolute;
+    margin-left: 2.5rem;
+}
+.output {
+    position: relative;
+    display: none;
+}
+
+.zapis {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    z-index: 1;
+}
+.zapis:nth-child(1) {
+    top: 45%;
+}
+.zapis:nth-child(2) {
+    top: 50%;
+}
+.zapis:nth-child(3) {
+    top: 55%;
+}

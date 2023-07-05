@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form class="form" id="myForm">
+            <div>
+                <label for="miesto">Mno miestoooo ☺</label>
+                <input type="text" id="miesto" name="miesto" required>
+            </div>
+            <div>
+                <label for="cas">Ehm kedyyyyy</label>
+                <input type="datetime-local" id="cas" name="cas" required>
+            </div>
+            <div>
+                <label for="napady">Mozno nejaky random text...</label>
+                <textarea id="napady" name="napady" rows="4"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Zobrazit" onclick="zpracovatForm(event)">
+                <img src="la.png" alt="" width="113px" class="images">
+            </div>
+        </form>
+        <div class="output" id="outputDiv">
+            <img src="picnic.png" alt="" class="fotka">
+            <p class="zapis" id="miestoOutput">Miesto</p>
+            <p class="zapis" id="napadyOutput">Napad</p>
+            <p class="zapis" id="casOutput">Cas</p>
+        </div>
+    </div>
+    
+    <div id="player"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Vytvorte iframe pre vloženie videa
+        let tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        let firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+        // Callback funkcia pre inicializáciu prehrávača
+        function onYouTubeIframeAPIReady() {
+          // Vytvorte novú inštanciu prehrávača
+          let player = new YT.Player('player', {
+            height: '315',
+            width: '560',
+            videoId: 'Z_hOR50u7ek', // ID videa
+            playerVars: {
+              autoplay: 1, // Automatické spustenie videa
+              controls: 0, // Skrytie ovládacích prvkov
+              modestbranding: 1, // Skrytie loga YouTube
+              showinfo: 0, // Skrytie informácií o videu
+              rel: 0, // Skrytie odporúčaných videí na konci
+            },
+          });
+        }
+      </script>
+      
+</html>
